@@ -5,6 +5,8 @@ const UserSchema = new mongoose.Schema({
   nickname: String,
   password: String,
 });
+
+// userId라는 가상값 
 UserSchema.virtual("userId").get(function () {
   return this._id.toHexString();
 });
